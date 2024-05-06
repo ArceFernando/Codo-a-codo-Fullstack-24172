@@ -1,0 +1,106 @@
+/*Selector universal*/
+*{
+    margin: 0%;
+    font-size: 1.6vw;
+    padding: 0%;
+    font-family:"Lato"
+}
+
+/*Estilo secciones*/
+    /*Sección 1*/
+.seccion1 {
+    padding-top: 0.5vh;
+    background-image: url('../img/LaFavo.png');
+    background-repeat: no-repeat;
+    background-size:contain;/*cover ocupar todo el contenedor, con container se mantiene dentro
+  /* box-shadow: 0vw 0vh 1vw rgba(0, 0, 0, 0.5);/*sombra al borde de la imágen*/
+    height: 20vh;
+    position: relative;
+    margin-bottom: 5vh;
+
+    animation-name: mover;
+    animation-duration: 15s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mover {
+    0%{background-image: url('../img/LaFavo1.png'); left: 0vw;top: 15vh;}
+    25%{background-image: url('../img/LaFavo2.png');left: 15vw;top: 15vh;}
+    50%{background-image: url('../img/LaFavo3.png');left: 35vw;top: 15vh;}
+    100%{background-image: url('../img/LaFavo4.png');left: 65vw;top: 15vh;}
+}
+
+/*Sección 2*/
+.contenedorformativas {
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contenedorformativas > img{
+    width: auto;
+    height: 25vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contenedorformativas > img:hover {
+    transform: scale(2.2) /*rotate(30deg) translateX(5vw)*/;  
+    /* Aplica escala, rotación y traslación en hover */
+ } 
+
+ /*Sección 3*/
+.contenedorprimera {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2vw;
+    margin-top: 5vh;
+}
+    
+.contenedorprimera img{
+    width: auto;
+    height: 25vh;
+    transition: transform 0.3s ease-in-out; /*Lento normal lento*/
+}
+    
+.contenedorprimera img:hover{
+    transform: scale(1.2);
+    /* Cambia el tamaño de la imagen al 120% en hover */
+}
+
+/*-sección 4*/
+.contenedorcancha {
+    background-image: url('../img/cancha.jpg');
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 40vh;
+    position: relative;
+    margin-top: 10vh; 
+    margin-left: 30vw; 
+    margin-bottom: 10vh; 
+
+    animation-name: cambiar;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes cambiar {
+    0%{background-image: url('../img/Cancha1.jpg'); left: 0vw;top: 0vh;}
+    25%{background-image: url('../img/Cancha2.jpg');left: 0vw;top: 0vh;}
+    50%{background-image: url('../img/Cancha3.jpg');left: 0vw;top: 0vh;}
+    100%{background-image: url('../img/Cancha4.jpg');left: 0vw;top: 0vh;}
+}
+
+.estrellas{
+    background: #0B223C url("../img/stars.png") repeat;
+    animation: mover-estrellas 200s linear infinite;
+}
+
+@keyframes mover-estrellas{
+    from{background-position: 0 0;}
+    to{background-position: 100vw 0;}
+}

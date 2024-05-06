@@ -1,0 +1,75 @@
+/*Estilo fuente*/
+@font-face {
+    font-family:"Lato";
+    src: url('../fons/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family:"Lato2";
+    src: url('../fons/Lato/Lato-Black.ttf');
+}
+
+/*Estilo menú de navegación*/
+.menu {
+    text-decoration: none;
+    color: white;
+    padding-right: 0.8vw;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #059cac;
+}
+
+/*Eliminar el comportamiento en bloque encabezado*/
+.header-linea {
+    /*display: inline-block;*/
+    margin-right: 5vw;
+    margin-left: 5vw;
+    padding-right: 1vw ;
+    padding-top: 1vh;
+}
+
+/*Estilo encabezado*/
+header {
+    background-color: black;
+    height: 15vh;
+    font-size: 1.5vw;
+    text-align: end;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Tamaño logo*/
+.logo {
+    width: 11vw;
+    height: auto;
+}
+
+/*puntos de corte*/
+@media screen and (max-width: 600px){
+    
+    header {
+        flex-direction: column;
+
+    }
+
+    .menu {
+        font-size: 5vw;
+    }
+
+    .logo {
+        width: 15vw;
+        height: auto;
+    }
+
+    .header-linea{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+}

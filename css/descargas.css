@@ -1,0 +1,132 @@
+/*Estilo fuente*/
+@font-face {
+    font-family:"Lato";
+    src: url('../fons/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family:"Lato2";
+    src: url('../fons/Lato/Lato-Black.ttf');
+}
+
+/*Selector universal*/
+*{
+    margin: 0%;
+    font-size: 1.6vw;
+    padding: 0%;
+    font-family:"Lato"
+}
+
+/*Estilo titulo, selector etiqueta*/
+h1 {
+    font-size: 5vw;
+    font-family:"Lato2";
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+h3 {
+    font-size: 2.5vw;
+}
+
+h3, h4 {
+    font-family:"Lato2";
+    text-align: left;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+h4 {
+    font-size: 1.7vw;
+}
+
+h5 {
+    font-size: 1vw;
+}
+
+/*Estilo menú de navegación*/
+.menu {
+    text-decoration: none;
+    color: white;
+    padding-right: 0.8vw;
+    font-size: 1.3vw;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #059cac;
+}
+
+/*Tamaño logo*/
+.logo {
+    width: 11vw;
+    height: auto;
+}
+
+/*Estilo secciones*/
+    /*Sección 1*/
+
+.seccion1 {
+    padding-top: 20vh;
+    text-align: justify;
+    margin: 0vw 10vh;
+}
+
+.seccion2 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(30vw,1fr));
+    gap: 2vw;
+    justify-items: center;
+    margin-top: 5vh;
+}
+
+.hipervinculo2 {
+    font-size: 1.5vw;
+    color: black;
+    text-decoration: none;
+}
+
+.documento{
+    /*background: radial-gradient(#2F527A, #0B223C);*/
+    background: #d0e0de;
+    width: 30vw;
+    /*height: 45vh;*/
+    height: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 2vh;
+
+    /* Asignar las propiedades: display, flex-direction
+    align-content*/
+    display: flex;
+    flex-direction: column;
+}
+
+/* Pseudoclase */
+.documento:hover {
+    background: rgba(245, 245, 245, 0.72);
+   /* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /*Sombra al pasar el cursor por cada caja*/
+}
+
+main {
+    margin-bottom: 10vh;
+}
+
+/*puntos de corte*/
+@media screen and (max-width: 600px){
+    .seccion2 {
+        grid-template-columns: repeat(1, minmax(30vw,1fr));
+    }
+
+    .documento {
+        width: 60vw;
+        height: 25vh;
+    }
+
+    .texto {
+        font-size: 4vw;
+    }
+
+}

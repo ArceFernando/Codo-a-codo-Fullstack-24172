@@ -1,0 +1,143 @@
+/*Estilo fuente*/
+@font-face {
+    font-family:"Lato";
+    src: url('../fons/Lato/Lato-Regular.ttf');
+}
+
+@font-face {
+    font-family:"Lato2";
+    src: url('../fons/Lato/Lato-Black.ttf');
+}
+
+/*Selector universal*/
+*{
+    margin: 0%;
+    font-size: 1.6vw;
+    padding: 0%;
+    font-family:"Lato"
+}
+
+/*Estilo menú de navegación*/
+.menu {
+    text-decoration: none;
+    color: white;
+    padding-right: 0.8vw;
+}
+
+a:hover {
+    font-weight: bold;
+    color: #059cac;
+}
+
+/*Eliminar el comportamiento en bloque encabezado*/
+/*.header-linea {
+    display: inline-block;
+    margin-right: 5vw;
+    margin-left: 5vw;
+    padding-right: 1vw ;
+    padding-top: 1vh;
+}*/
+
+/*Estilo encabezado*/
+/*header {
+    background-color: black;
+    height: 15vh;
+    font-size: 1.5vw;
+    text-align: end;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}*/
+
+/*Tamaño logo*/
+.logo {
+    width: 11vw;
+    height: auto;
+}
+
+/*Estilo titulo, selector etiqueta*/
+h1 {
+    font-size: 5vw;
+    font-family:"Lato2";
+}
+
+h2 {
+    font-size: 3vw;
+}
+
+h3 {
+    font-size: 2.5vw;
+}
+
+h3, h4 {
+    font-family:"Lato2";
+    text-align: left;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+h4 {
+    font-size: 1.7vw;
+}
+
+h5 {
+    font-size: 1vw;
+}
+
+/*Estilo secciones*/
+    /*Sección 1*/
+.seccion1 {
+    padding-top: 20vh;
+}
+
+.linea-bloque1 {
+    display: inline-block;
+    padding-left: 22vw;
+    text-align: center;
+}
+
+.frase {
+    padding-top: 5vh;
+    padding-left: 35vw;
+    width: 25vw;
+    height: auto;
+}
+
+    /*Sección 2, 3 y 4*/
+.seccion2, .seccion3, .seccion4, li {
+    text-align: justify;
+    margin: 1vw 10vh;
+}
+
+    /*Sección 3*/
+.capitana {
+    padding-top: 5vh;
+    padding-left: 25vw;
+    width: 50vw;
+    height: auto;
+}
+
+.atencion{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    text-align: center;
+    background-color: #059cac;
+    position: relative;
+    animation: cambio 5s infinite;
+    animation-delay: 1s;
+}
+
+@keyframes cambio {
+    0%{background-color:  #49b3bd;}
+    25%{background-color:   #8cc9cd;}
+    50%{background-color:  #d0e0de;}
+
+}
+
+main {
+    margin-bottom: 10vh;
+}
