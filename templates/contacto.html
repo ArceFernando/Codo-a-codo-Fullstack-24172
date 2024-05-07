@@ -9,6 +9,7 @@
     <link rel= "icon" href="../img/escudo.ico">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/contacto.css">
     <title>Contacto</title>
 </head>
 
@@ -16,7 +17,7 @@
      <!--Encabezado-->
     <header>
         <!--Logo-->
-        <div class="header-linea">
+        <div>
             <video class="logo" src="../video/logoanimado.mp4" autoplay muted></video>
         </div>
         <!--Menú de navegación-->
@@ -36,50 +37,81 @@
          <!--Sección 6-->
          <section>
             <div>
+                
+                
+                <img src="../img/cancha.jpg" alt="Nuestra cancha">
+                
                 <h2> Nuestra cancha</h2>
-            </div>
-            <p>Se ubica en el Gimansio Municipal N°5 de la Municipalidad de Mendoza, Barrio Alto Mendoza.</p>
-            <img src="../img/cancha.jpeg" alt="Nuestra cancha">
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.4160555124336!2d-68.90630662490612!3d-32.88716636888596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e082a27b0c41f%3A0x2318be53513f6f45!2sGimnasio%20Municipal%20N%C2%B0%205!5e0!3m2!1ses-419!2sar!4v1698020543231!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <p>Se ubica en el Gimansio Municipal N°5 de la Municipalidad de Mendoza, Barrio Alto Mendoza.</p>
+        </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.4160555124336!2d-68.90630662490612!3d-32.88716636888596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e082a27b0c41f%3A0x2318be53513f6f45!2sGimnasio%20Municipal%20N%C2%B0%205!5e0!3m2!1ses-419!2sar!4v1698020543231!5m2!1ses-419!2sar"  width="600" height="400"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
-       <form action="https://formspree.io/f/xnqkwvrv" method="post"> <!-- ACTION: a donde envió los datos del formulario. METHOD POST: el protocolo de comunicación con el servidor es de tipo post, se van a enviar datos-->
+       <div class="container-form" >
+            <div class="info-form">
+                <h2>Contactanos</h2>
+                <p>Te podes comunicar con nosotros por cualquiera de los estos medios o mandarnos un mensaje desde el formulario. </p>
+                <a href="#"class="fa fa-phone">Whatsapp: 3865-424039</a>
+                <a href="#"class="fa fa-email">Email: info@gmail.com</a>
+                <a href="#"class="fa fa-Ciudad">gmail.com</a>
+            </div>
+            <form action="#"  autocomplete="off">
+                <input type="text" name="nombre" placeholder="Ingresa Tu Nombre " class="campo">
+                <input type="email" name="email" placeholder="Ingresa Tu Correo " class="campo">
+                <textarea name="mensaje" id="" placeholder="Ingresa Tu Mensaje"></textarea>
+                <input type="submit" name="enviar" value="Enviar mensaje" class="btn-enviar">
+
+
+
+
+            </form>
+    
+    
+        </div>
+       
+       
+       
+       
+       
+       
+       
+     
+       <!-- <form action="https://formspree.io/f/xnqkwvrv" method="post"> action: a donde envió los datos del formulario. method post: el protocolo de comunicación con el servidor es de tipo post, se van a enviar datos
             <div>
-                <label for="Apellido">Apellido:</label>
-                <input type="text" name="Apellido" id="Apellido">
+                <label for="apellido">apellido:</label>
+                <input type="text" name="apellido" id="apellido">
+            </div>
+        
+            <div>
+                <label for="nombre">nombre:</label>
+                <input type="text" name="nombre" id="nombre" placeholder="escriba nombre. ejemplo: maria">
+            </div> -->
+             
+            <!-- <div>
+                <label for="fecha">fecha de nacimiento:</label>
+                <input type="date" name="fecha" id="fecha">
             </div>
 
             <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Escriba nombre. Ejemplo: Maria">
-            </div>
-            
-            <div>
-                <label for="Fecha">Fecha de nacimiento:</label>
-                <input type="date" name="Fecha" id="Fecha">
-            </div>
-
-            <div>
-                <label for="Edad">Edad:</label>
-                <input type="number" name="Edad" id="Edad" required min="7"> <!--required campo obligatorio MIN ninimo de edad requerida o maximo-->
+                <label for="edad">edad:</label>
+                <input type="number" name="edad" id="edad" required min="7"> 
             </div>
 
             <br>
             <hr>
 
             <div>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Borrar">
+                <input type="submit" value="enviar">
+                <input type="reset" value="borrar">
             </div>
 
             <div>
                 <label for="género
-                ">Seleccione género:</label>
+                ">seleccione género:</label>
                 <select name="género" id="género">
-                    <option value="Femenino">Femenino</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Otro">Otro</option>
+                    <option value="femenino">femenino</option>
+                    <option value="masculino">masculino</option>
+                    <option value="otro">otro</option>
                 </select>
             </div>
 
@@ -87,21 +119,21 @@
             <hr>
 
             <div>
-                <h3>Seleccione un área a desarrollarse</h3>
+                <h3>seleccione un área a desarrollarse</h3>
                 
                 <div>
                     <input type="radio" name="area" id="app" value="app">
-                    <label for="app">App Web</label>
+                    <label for="app">app web</label>
                 </div>
 
                 <div>
                     <input type="radio" name="area" id="datos" value="datos">
-                    <label for="datos">Análisis de datos</label>
+                    <label for="datos">análisis de datos</label>
                 </div>
                 
                 <div>
                     <input type="radio" name="area" id="juegos" value="juegos">
-                    <label for="juegos">Desarrollo de juegos</label>
+                    <label for="juegos">desarrollo de juegos</label>
                 </div>
             </div>
 
@@ -109,59 +141,59 @@
             <hr>
 
             <div>
-                <h3>Seleccione un área a desarrollarse</h3>
+                <h3>seleccione un área a desarrollarse</h3>
                 
                 <input type="radio" name="area" id="app" value="app">
-                <label for="app">App Web</label>
+                <label for="app">app web</label>
                 
                 <body type="radio" name="area" id="datos" value="datos">
-                <label for="datos">Análisis de datos</label>
+                <label for="datos">análisis de datos</label>
                 
                 <input type="radio" name="area" id="juegos" value="juegos">
-                <label for="juegos">Desarrollo de juegos</label>   
+                <label for="juegos">desarrollo de juegos</label>   
             </div>
 
             <br>
             <hr>
 
             <div>
-                <h3>Seleccione tecnologías</h3>
+                <h3>seleccione tecnologías</h3>
                 <input type="checkbox" name="tecnología" id="html" value="html">
-                <label for="html">HTML</label>
+                <label for="html">html</label>
 
                 <input type="checkbox" name="tecnología" id="css" value="css">
-                <C< for="css">CSS</label>
+                <c< for="css">css</label>
 
                 <input type="checkbox" name="tecnología" id="js" value="js">
-                <label for="js">JS</label>
+                <label for="js">js</label>
             </div>
 
             <br>
             <hr>
 
             <div>
-                <label for="navegador">Seleccione navegador:</label>
+                <label for="navegador">seleccione navegador:</label>
                 <input list="browsers" id="navegador" name="navegador">
                 <datalist id="browsers">
-                    <option value="Chrome"></option>
-                    <option value="Opera"></option>
-                    <option value="Safarí"></option>
-                    <option value="Firefox"></option>
-                    <option value="Edge"></option> 
+                    <option value="chrome"></option>
+                    <option value="opera"></option>
+                    <option value="safarí"></option>
+                    <option value="firefox"></option>
+                    <option value="edge"></option> 
                 </datalist>
             </div>
 
             <br>
 
             <fieldset>
-                <legend>Datos personales:</legend>
+                <legend>datos personales:</legend>
                 <div>
-                    <label for="teléfono">Teléfono:</label>
+                    <label for="teléfono">teléfono:</label>
                     <input type="tel" name="teléfono" id="teléfono">
                 </div>
 
                 <div>
-                    <label for="email">Correo:</label>
+                    <label for="email">correo:</label>
                     <input type="email" name="email" id="email">
                 </div>
             </fieldset>
@@ -169,13 +201,13 @@
             <br>
 
             <div>
-                <label for="comentario">Comentario:</label>
-                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="Escriba un comentario"></textarea>
+                <label for="comentario">comentario:</label>
+                <textarea name="comentario" id="comentario" cols="30" rows="10" placeholder="escriba un comentario"></textarea>
             </div>
 
         </form>
 
-    </main>
+    </main> -->
 
     <!--Pie de página-->
     <footer>
