@@ -50,7 +50,7 @@ header {
 }
 
 /*puntos de corte*/
-@media screen and (max-width: 600px){
+@media screen and (max-width: 952px){
     
     header {
         flex-direction: column;
