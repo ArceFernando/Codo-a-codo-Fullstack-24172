@@ -1,0 +1,171 @@
+@font-face {
+    font-family: Roboto;
+    src: url(../src/fonts/Roboto/Roboto-Regular.ttf);
+}
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: aquamarine;
+    font-family: Roboto, sans-serif;
+}
+
+header, main, footer, nav {
+    padding: 25px;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo {
+    width: 100px;    
+}
+h1 {
+    color:white;
+    font-size: 100px;
+}
+.button {   
+    text-decoration: none;
+    background-color: coral;
+    padding: 10px;
+    color:black;
+
+    border-radius: 5px;
+    border-top-right-radius: 10px;
+
+    box-shadow: 5px 5px 5px rgb(0,0,0, 0.5);
+    
+    transition: 0,2s all;
+}
+.button:hover {
+    background-color: black;
+    color: white;
+}
+header #login {
+     
+    
+}
+nav {
+    background-color: rgb(248, 109, 28);
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-right: 10px;  
+
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;    
+    display: flex;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 10px;
+    
+    background-color:yellow;
+    margin-right: 10px;    
+    text-decoration: none;
+    color: black;
+    
+    border-radius: 5px;
+    transition: 0,2s all;
+    border-top-right-radius: 10px;
+}
+nav ul li a:hover {
+    background-color: black;
+    color: white;
+
+}
+
+main {
+    padding: 0;
+}
+
+#Productos, #Contacto {
+    min-height: 50vh;
+}
+.titulo   {
+    background-color: coral;
+    padding: 25px;
+}
+.subtitulo {
+    background-color: blueviolet;
+    padding: 15px;
+    padding-left: 25px;
+    font-size: 18px;
+}
+#Productos .contenedor_ofertas {
+    display:flex;
+    min-height: 25vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#Productos .contenedor_ofertas article {
+    width: 20%;
+    height: 400px;
+/* Buscar en flex para usar porcentaje */
+    background-color: green;
+    margin: 25px;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Productos .contenedor_ofertas article h4, #Productos .contenedor_ofertas p{
+    flex: 1;
+}
+#Productos .contenedo_ofertas article h4 {
+    padding: 10px;
+}
+#Productos .contenedor_categorias {
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    width: 60%;
+
+    margin: 0 auto;
+}
+/* Clases con minuscula, id con Mayuscula */
+#Productos .contenedor_categorias article {
+    padding: 50px 25px;
+    background-color: green;
+    width: 20%;
+
+    text-align: center;
+
+    margin: 15px;
+    
+}
+
+#Contacto form {
+    display: grid;
+
+    grid-template-columns: repeat(2, auto);
+    grid-row-gap: 15px;
+    grid-column-gap: 5px;
+
+    width: 30vw;
+    margin: 25px auto;
+    background-color: yellow;
+    padding: 25px;
+}
+#contacto form input[type="reset"], #contacto form input[type="submit"]{
+    border: none;
+}
+footer {
+    background-color: black;
+}
+
