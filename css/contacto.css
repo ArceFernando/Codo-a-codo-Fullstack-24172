@@ -75,3 +75,20 @@ iframe{
     margin-left:25%;
 
 }
+
+h3 {
+    text-align: center;
+    padding: 15px;
+}
+
+h4 {
+    text-align: center;
+    padding: 15px;
+     
+}
+
+article { 
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
