@@ -1,26 +1,51 @@
-let persona = document.querySelector("#Persona");
-let personaCopia = persona.cloneNode(true);
 
-let contenedor = document.querySelector("main");
 
-persona.remove()
+const userForm = document.querySelector('#userForm')
 
-fetch("https://randomuser.me/api")
-.then(response => response.json())
-.then(data => {
-   let nuevaPersona = personaCopia.cloneNode(true);
+let users = []
 
-   nuevaPersona.querySelector("#Foto").src=data.results[0].picture.large;
-   nuevaPersona.querySelector("#Foto").alt="Foto Club";
-   nuevaPersona.querySelector("#Nombre").innerHTML = data.results[0].name.first+ " "+ data.results[0].name.last;
-   
-   contenedor.appendChild(nuevaPersona);
-   
-   console.log(data.results[0].name.first + " " + data.results[0].name.last);
+window.addEventListener('DOMContentLoaded', async () => {
+   const response = await fetch('/api/users');
+   const data = await response.json()
+   users = data
+   renderUser(users)
+      //method: 'GET'   
 });
 
-let titulo =document.getElementById("Titulo");
+userForm.addEventListener('submit', async e => {
+   e.preventDefault()
 
-titulo.innerHTML = "Este ha sido alterado por JS"
+   const username = userForm['username'].value
 
-console.log(titulo);
+   const response = await fetch('/api/users', {
+      method: 'POST',
+      headers: {
+         'content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+         username: username 
+      })
+   }) 
+
+   const data = await response.json();
+
+   users.push(data)
+
+   renderUser(users)
+
+   userForm.reset();
+})
+
+function renderUser(users) {
+   const userList = document.querySelector('#userList')
+   userList.innerHTML = ''
+
+   users.forEach(user => {
+      const userItem = document.createElement('li')
+      userItem.innerHTML = `
+         <h6>${user.username}</h6>
+      `
+      userList.append(UserItem)
+   })
+}
+
