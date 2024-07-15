@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/5/yeti/bootstrap.min.css"
+    />
+    <!-- https://bootswatch.com/  -->
+    
+  </head>
+  
+  
+  <body class="bg-secondary">
+    <div class="container">
+      <div class="col-md-4 offset-md-4"> <!--Para centrar-->
+        <h1 class="fs-3 text-center">Socios</h1>
+
+        <form class="card card-body bg-dark text-white" id="userForm"> <!-- id que voy a usar con el Js-->
+          <label for="username">Nombre:</label>
+          <input
+            name="socio"
+            type="text"
+            placeholder="socio"
+            class="form-control mb-2"
+            required
+          />
+
+          <label for="email">email:</label>
+          <input
+            name="email"
+            type="email"
+            placeholder="email"
+            class="form-control mb-2"
+            required
+          />
+
+          <label for="password">password:</label>
+          <input
+            name="password"
+            type="password"
+            placeholder="password"
+            class="form-control mb-2"
+            required
+          />
+
+          <button class="btn btn-primary">Guardar</button>
+        </form>
+
+          
+        <ul id="userList" class="list-group"></ul>
+      </div>
+    </div>
+   
+   
+    <script src="/static/main.js"></script>
+      
+  </body>
+</html>
